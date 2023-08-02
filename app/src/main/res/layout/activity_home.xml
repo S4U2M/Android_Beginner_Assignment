@@ -125,7 +125,7 @@
                 />
             <Space
                 android:layout_width="10dp"
-                android:layout_height="50dp"
+                android:layout_height="50dp"/>
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
