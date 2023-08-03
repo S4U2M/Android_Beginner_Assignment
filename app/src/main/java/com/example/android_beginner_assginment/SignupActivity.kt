@@ -3,28 +3,40 @@ package com.example.android_beginner_assginment
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 
 class SignupActivity : AppCompatActivity() {
+    private val id: EditText by lazy {findViewById(R.id.id_create) }
+    private val psw: EditText by lazy{findViewById(R.id.psw_create)}
+    private val name:EditText by lazy { findViewById(R.id.name_create) }
+    private val age:EditText by lazy { findViewById(R.id.age_create) }
+    private val gender:EditText by lazy { findViewById(R.id.gender_create) }
+    private val mbti:EditText by lazy { findViewById(R.id.mbti_create) }
+    private val hobby:EditText by lazy { findViewById(R.id.hobby_create) }
+
+
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
+        textInput(id)
+        textInput(psw)
+        textInput(name)
+        textInput(age)
+        textInput(gender)
+        textInput(mbti)
+        textInput(hobby)
+
     }
 
     fun signupfinish(view: View) {
-
-        val id = findViewById<EditText>(R.id.id_create)
-        val psw = findViewById<EditText>(R.id.psw_create)
-        val name = findViewById<EditText>(R.id.name_create)
-        val age = findViewById<EditText>(R.id.age_create)
-        val gender = findViewById<EditText>(R.id.gender_create)
-        val mbti = findViewById<EditText>(R.id.mbti_create)
-        val hobby = findViewById<EditText>(R.id.hobby_create)
 
         val inputId = id.text.toString()
         val inputpsw = psw.text.toString()
@@ -149,6 +161,21 @@ class SignupActivity : AppCompatActivity() {
 
     fun beWhite(id: View) {
         id.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white))
+    }
+
+    fun textInput(id:EditText){
+
+        id.addTextChangedListener(object:TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (id.text.toString().isNotEmpty()){
+                    beWhite(id)
+                }
+            }
+        })
     }
 
 }

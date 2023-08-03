@@ -14,6 +14,7 @@ class HomeActivity : AppCompatActivity() {
 
         val receivedIntent = intent
         val receivedBundle = receivedIntent.getBundleExtra("bundle")
+        val user = receivedBundle?.getSerializable("loginUserInfo") as User
 
         val name = findViewById<TextView>(R.id.nameInprfile)
         val age = findViewById<TextView>(R.id.ageInprofile)
@@ -21,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
         val mbti = findViewById<TextView>(R.id.mbtiInprofile)
         val hobby = findViewById<TextView>(R.id.hobbyInprofile)
 
-        val user = receivedBundle?.getSerializable("loginUserInfo") as User
+
 
             name.text = " ${user.name}"
             age.text = "${user.age}"
