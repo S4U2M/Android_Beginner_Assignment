@@ -88,13 +88,6 @@ class SignupActivity : AppCompatActivity() {
             } else {
 
                 beRed(id)
-                beWhite(psw)
-                beWhite(name)
-                beWhite(age)
-                beWhite(gender)
-                beWhite(mbti)
-                beWhite(hobby)
-
                 Toast.makeText(this, "중복된 아이디는 생성할 수 없습니다.\n 다시 입력해주세요", Toast.LENGTH_SHORT)
                     .show()
             }
