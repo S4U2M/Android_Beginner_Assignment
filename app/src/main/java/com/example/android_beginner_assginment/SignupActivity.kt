@@ -22,12 +22,10 @@ class SignupActivity : AppCompatActivity() {
     private val mbti: EditText by lazy { findViewById(R.id.mbti_create) }
     private val hobby: EditText by lazy { findViewById(R.id.hobby_create) }
 
-
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-
 
         textInput(id)
         textInput(psw)
@@ -86,7 +84,6 @@ class SignupActivity : AppCompatActivity() {
                 finish()
 
             } else {
-
                 beRed(id)
                 Toast.makeText(this, "중복된 아이디는 생성할 수 없습니다.\n 다시 입력해주세요", Toast.LENGTH_SHORT)
                     .show()
@@ -98,8 +95,6 @@ class SignupActivity : AppCompatActivity() {
     fun Changingcolors(id: View, inputId: String){
         if (inputId.isEmpty()) {
             beRed(id)
-        } else {
-            beWhite(id)
         }
     }
 
