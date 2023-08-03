@@ -54,22 +54,14 @@ class SignupActivity : AppCompatActivity() {
         ) {
 
             Toast.makeText(this, "공백을 채워주세요", Toast.LENGTH_SHORT).show()
-            Changingcolors(
-                id = id,
-                inputId = inputId,
-                psw = psw,
-                inputpsw = inputpsw,
-                name = name,
-                inputname = inputname,
-                inputage = inputage,
-                age = age,
-                inputgender = inputgender,
-                gender = gender,
-                inputmbti = inputmbti,
-                mbti = mbti,
-                inpuhobby = inputhobby,
-                hobby = hobby
-            )
+
+            Changingcolors(id, inputId)
+            Changingcolors(psw, inputpsw)
+            Changingcolors(name, inputname)
+            Changingcolors(age, inputage)
+            Changingcolors(gender, inputgender)
+            Changingcolors(mbti, inputmbti)
+            Changingcolors(hobby, inputhobby)
 
         } else {
 
@@ -110,56 +102,11 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    fun Changingcolors(
-        inputId: String, id: View,
-        inputpsw: String, psw: View,
-        inputname: String, name: View,
-        inputage: String, age: View,
-        inputgender: String, gender: View,
-        inputmbti: String, mbti: View,
-        inpuhobby: String, hobby: View
-    ) {
-
+    fun Changingcolors(id: View, inputId: String){
         if (inputId.isEmpty()) {
             beRed(id)
         } else {
             beWhite(id)
-        }
-
-        if (inputpsw.isEmpty()) {
-            beRed(psw)
-        } else {
-            beWhite(psw)
-        }
-
-        if (inputname.isEmpty()) {
-            beRed(name)
-        } else {
-            beWhite(name)
-        }
-
-        if (inputage.isEmpty()) {
-            beRed(age)
-        } else {
-            beWhite(age)
-        }
-
-        if (inputgender.isEmpty()) {
-            beRed(gender)
-        } else {
-            beWhite(gender)
-        }
-
-        if (inputmbti.isEmpty()) {
-            beRed(mbti)
-        } else {
-            beWhite(mbti)
-        }
-
-        if (inpuhobby.isEmpty()) {
-            beRed(hobby)
-        } else {
-            beWhite(hobby)
         }
     }
 
