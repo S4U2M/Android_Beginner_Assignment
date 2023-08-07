@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.random.Random
 
 class HomeActivity : AppCompatActivity() {
@@ -24,12 +25,18 @@ class HomeActivity : AppCompatActivity() {
         val gender = findViewById<TextView>(R.id.genderInprofile)
         val mbti = findViewById<TextView>(R.id.mbtiInprofile)
         val hobby = findViewById<TextView>(R.id.hobbyInprofile)
+        val btn = findViewById<ConstraintLayout>(R.id.btn_close_profile)
+
 
         val img = findViewById<ImageView>(R.id.gundamImg)
         val imageResources = arrayOf(R.drawable.gundam03, R.drawable.gundam05,R.drawable.gundam01)
 
         var random = Random.nextInt(imageResources.size)
         val randomImg = imageResources[random]
+
+        btn.setOnClickListener{
+            finish()
+        }
 
 
         img.setImageResource(randomImg)
@@ -41,6 +48,8 @@ class HomeActivity : AppCompatActivity() {
             hobby.text = "${user.hobby}"
 
     }
+
+
 
 
 }
