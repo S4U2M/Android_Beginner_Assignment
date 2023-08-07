@@ -93,9 +93,7 @@ class SignupActivity : AppCompatActivity() {
     }
 
     fun Changingcolors(id: View, inputId: String){
-        if (inputId.isEmpty()) {
-            beRed(id)
-        }
+        if (inputId.isEmpty()) beRed(id)
     }
 
     fun beRed(id: View) {
