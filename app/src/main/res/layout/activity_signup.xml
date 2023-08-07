@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    tools:context=".SignupActivity"
+    android:background="@drawable/background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
         android:layout_marginTop="24dp"
         android:text="Create Pilot"
         android:textSize="40dp"
-
+        android:textColor="#959595"
         app:layout_constraintBottom_toTopOf="@+id/imgbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -54,12 +55,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:text="ID"
+                android:textColor="#959595"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/id_create"
                 android:layout_width="360dp"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
+                android:textColor="#959595"
                 android:hint="새로운 ID를 입력해주세요"
                 android:layout_gravity="center"
                 />
@@ -71,13 +74,15 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:text="PASSWARD"
+                android:textColor="#959595"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/psw_create"
                 android:layout_width="360dp"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:hint="새로운 비밀번호를 입력해주세요"
+                android:textColor="#959595"
                 android:inputType="textPassword"
                 android:layout_gravity="center"
                 />
@@ -90,13 +95,15 @@
                 android:layout_marginTop="20dp"
                 android:text="Name"
                 android:textSize="20dp"
+                android:textColor="#959595"
                 tools:ignore="DuplicateIds" />
 
             <EditText
                 android:id="@+id/name_create"
                 android:layout_width="360dp"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:hint="당신의 이름을 입력해주세요"
+                android:textColor="#959595"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -104,15 +111,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:textColor="#959595"
                 android:text="Age"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/age_create"
                 android:layout_width="360dp"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:hint="당신의 나이를 입력해주세요"
                 android:inputType="numberSigned"
+                android:textColor="#959595"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -120,14 +129,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:textColor="#959595"
                 android:text="성별"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/gender_create"
                 android:layout_width="360dp"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:hint="당신의 성별을 입력해주세요"
+                android:textColor="#959595"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -136,13 +147,15 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:text="MBTI"
+                android:textColor="#959595"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/mbti_create"
                 android:layout_width="360dp"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:hint="당신의 MBTI를 입력해주세요"
+                android:textColor="#959595"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -151,13 +164,15 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Hobby"
+                android:textColor="#959595"
                 android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/hobby_create"
                 android:layout_width="360dp"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:hint="당신의 취미를 입력해주세요"
+                android:textColor="#959595"
                 android:layout_gravity="center"/>
 
         </LinearLayout>
@@ -169,7 +184,6 @@
             android:layout_marginTop="15dp"
             android:onClick="signupfinish"
             android:text="Finish"
-
             android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

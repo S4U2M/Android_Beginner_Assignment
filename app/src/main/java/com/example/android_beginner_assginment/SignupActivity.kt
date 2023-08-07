@@ -3,6 +3,7 @@ package com.example.android_beginner_assginment
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -26,6 +27,16 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+
+        val newHintColor = Color.parseColor("#959595")
+
+        id.setHintTextColor(newHintColor)
+        psw.setHintTextColor(newHintColor)
+        name.setHintTextColor(newHintColor)
+        age.setHintTextColor(newHintColor)
+        gender.setHintTextColor(newHintColor)
+        mbti.setHintTextColor(newHintColor)
+        hobby.setHintTextColor(newHintColor)
 
         textInput(id)
         textInput(psw)
@@ -120,5 +131,6 @@ class SignupActivity : AppCompatActivity() {
     }
 
 }
+
 
 
